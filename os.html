@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KuroOS</title>
+    <script src="./dragndrop.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #icon-container {
+        user-select: none;
+        display: grid;
+        height: 100vh;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(var(--cols), 1fr);
+        grid-template-rows: repeat(var(--rows), 1fr);
+      }
+
+      #icon-row {
+        display: grid;
+      }
+
+      #grid-helper {
+        border: 1px solid red;
+      }
+
+      #icon-item {
+        --size: 100px;
+        width: var(--size);
+        height: var(--size);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 250ms ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="icon-container">
+    </div>
+    <div id="icon-item" style="background-color: burlywood;"></div>
+    <div id="icon-item" style="background-color: cadetblue;"></div>
+    <div id="icon-item" style="background-color: darkorchid;"></div>
+  </body>
+
+</html>
